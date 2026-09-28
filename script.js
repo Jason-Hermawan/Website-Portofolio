@@ -10,7 +10,6 @@ function closeModal(modalId) {
     if (modal) {
         modal.style.display = "none";
         
-        // Hentikan pemutaran video saat ditutup
         var iframe = modal.querySelector('iframe');
         if (iframe) {
             var iframeSrc = iframe.src;
@@ -31,7 +30,22 @@ window.onclick = function(event) {
     }
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
 
-document.getElementById('btnEmail').addEventListener('click', function() {
-    window.location.href = "mailto:email.anda@binus.ac.id";
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
 });
