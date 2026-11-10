@@ -1,40 +1,85 @@
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const themeLabel = document.getElementById("themeLabel");
+
+function setTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+
+    if (theme === "light") {
+        themeIcon.textContent = "☾";
+        themeLabel.textContent = "Dark Mode";
+    } else {
+        themeIcon.textContent = "☀";
+        themeLabel.textContent = "Light Mode";
+    }
+
+    localStorage.setItem("portfolio-theme", theme);
+}
+
+let savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+
+setTheme(savedTheme);
+
+themeToggle.addEventListener("click", function () {
+    let currentTheme = document.documentElement.getAttribute("data-theme");
+
+    if (currentTheme === "dark") {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
 function openModal(modalId) {
-    var modal = document.getElementById(modalId);
+    let modal = document.getElementById(modalId);
+
     if (modal) {
         modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
     }
 }
 
 function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
+    let modal = document.getElementById(modalId);
+
     if (modal) {
         modal.style.display = "none";
-        
-        var iframe = modal.querySelector('iframe');
+        document.body.style.overflow = "";
+
+        let iframe = modal.querySelector("iframe");
+
         if (iframe) {
-            var iframeSrc = iframe.src;
+            let iframeSrc = iframe.src;
             iframe.src = iframeSrc;
         }
     }
 }
 
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
-        
-        var iframe = event.target.querySelector('iframe');
-        if (iframe) {
-            var iframeSrc = iframe.src;
-            iframe.src = iframeSrc;
-        }
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        let modals = document.querySelectorAll(".modal");
+
+        modals.forEach(function (modal) {
+            if (modal.style.display === "flex") {
+                closeModal(modal.id);
+            }
+        });
     }
-};
+});
 
 document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-in");
+    let fadeElements = document.querySelectorAll(".fade-in");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    if (!("IntersectionObserver" in window)) {
+        fadeElements.forEach(function (element) {
+            element.classList.add("show");
+        });
+
+        return;
+    }
+
+    let observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
             } else {
@@ -42,10 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        threshold: 0.15
+        threshold: 0.12
     });
 
-    fadeElements.forEach(element => {
+    fadeElements.forEach(function (element) {
         observer.observe(element);
     });
 });
