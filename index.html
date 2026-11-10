@@ -1,187 +1,359 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+    <title>Jason Hermawan | Portfolio</title>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        .kontak-ringkas {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 15px;
-            max-width: 400px;
-        }
-
-        .btn-contact {
-            display: inline-flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
-            padding: 10px 16px;
-            background-color: #1e293b;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            border: 1px solid #334155;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .btn-contact:hover {
-            background-color: #38bdf8;
-            color: #0f172a;
-            border-color: #38bdf8;
-            transform: translateY(-2px);
-        }
-    </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="menu">
+    <header class="navbar">
+        <nav class="menu">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
-        </div>
-    </div>
+        </nav>
 
-    <div class="hero-section fade-in" id="home">
-        <div class="hero-text">
-            <p class="sub-title">HALO, NAMA SAYA</p>
-            <h1>Jason Hermawan</h1>
-            <h3>Mahasiswa Computer Science BINUS - Alam Sutera</h3>
-            <p class="deskripsi-singkat">
-                Saya mahasiswa Computer Science BINUS yang sedang belajar pemrosesan data dan Machine Learning. Portofolio ini saya buat dengan harapan untuk mendapatkan kesempatan magang di perusahaan.
-            </p>
-            
-            <div class="kontak-ringkas">
-                <a href="mailto:jason.hermawan@binus.ac.id" class="btn-contact">
-                    📧 jason.hermawan@binus.ac.id
-                </a>
-                <a href="https://www.linkedin.com/in/jason-hermawan-18ba79325" target="_blank" rel="noopener noreferrer" class="btn-contact">
-                    🔗 LinkedIn Profile
-                </a>
-                <a href="https://github.com/Jason-Hermawan" target="_blank" rel="noopener noreferrer" class="btn-contact">
-                    💻 GitHub Profile
-                </a>
-                <a href="CV_Jason Hermawan.pdf" class="btn-contact" download>
-                    📄 Download CV
-                </a>
-            </div>
-        </div>
+        <button class="theme-toggle" id="themeToggle" type="button">
+            <span id="themeIcon">☀</span>
+            <span id="themeLabel">Light Mode</span>
+        </button>
+    </header>
 
-        <div class="hero-foto">
-            <img src="WhatsApp Image 2026-09-27 at 17.36.03.jpeg" alt="Foto Profil">
-        </div>
-    </div>
+    <main>
 
-    <div class="section fade-in" id="about">
-        <h2>Tentang Saya</h2>
-        <p class="teks-isi">
-           Saya Jason Hermawan, mahasiswa Computer Science semester 5 di BINUS University Alam Sutera dengan peminatan Artificial Intelligence. Saya memiliki kemampuan komunikasi yang baik, adaptif, serta terbiasa bekerja sama dalam tim untuk menyelesaikan berbagai proyek. Selain dalam bidang akademis, saya juga berpengalaman berorganisasi sebagai aktivis di HIMTI periode 2024–2025 (1 tahun) yang membantu saya lebih lanjut cara bagaimana berkomunikasi dengan berbagai macam orang
-            Melalui program magang, saya berharap dapat mempelajari hal-hal baru, mengasah keterampilan secara langsung, dan merasakan pengalaman beradaptasi di lingkungan pekerjaan profesional.
-        </p>
-    </div>
+        <section class="hero-section" id="home">
 
-    <div class="section gray-bg fade-in" id="skills">
-        <h2>Keahlian Saya</h2>
-        <p class="teks-isi">Beberapa hal yang sedang saya pelajari di kampus dan project pribadi:</p>
-        
-        <div class="skills-wrapper">
-            <span class="skill-badge">Python (Data Processing)</span>
-            <span class="skill-badge">C / C++ (Algoritma)</span>
-            <span class="skill-badge">Machine Learning & NLP</span>
-            <span class="skill-badge">IndoBERT / PyTorch</span>
-            <span class="skill-badge">HTML & CSS</span>
-            <span class="skill-badge">SQL / Database</span>
-        </div>
-    </div>
+            <div class="hero-content fade-in">
+                <span class="eyebrow">COMPUTER SCIENCE STUDENT</span>
 
-    <div class="section fade-in" id="projects">
-        <h2>Project Akademik & Latihan</h2>
-        <p class="teks-isi" style="margin-bottom: 25px;">Klik pada project di bawah untuk melihat detail dan video demonya:</p>
+                <h1>Halo, saya <span>Jason Hermawan.</span></h1>
 
-        <div class="projects-grid">
-            
-            <div class="project-card fade-in" onclick="openModal('modalApartment')">
-                <div class="project-img-container">
-                    <img src="https://media.istockphoto.com/id/2148850507/photo/contemporary-urban-apartments-with-rooftop-greenery.jpg?s=612x612&w=0&k=20&c=N5JEzh21OtER3f3IHdxf-N8kWUJVll1eT4dmXdeRwPU=">
+                <h2>Computer Science Student at BINUS University</h2>
+
+                <p class="hero-description">
+                    Saya adalah mahasiswa aktif Computer Science BINUS Alam Sutera, Saya sedang mencari kesempatan untuk bermagang di perusahaan dan
+                    memperluas pengetahuan saya sekaligus merasakan lingkungan pekerjaan profesional
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Lihat Project</a>
+                    <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+                    <a href="#cv" class="btn btn-outline">Lihat CV</a>
                 </div>
-                <div class="project-content">
-                    <h3>Dwellth - Apartment Recommendation System</h3>
-                    <p>Platform pencarian dan rekomendasi sewa/beli apartemen yang dirancang untuk memudahkan pengguna menemukan hunian yang sesuai berdasarkan kriteria pengguna.</p>
-                    <span class="tech-tag">Python · Recommendation System · Web Development</span>
+
+                <div class="social-links">
+                    <a href="mailto:jason.hermawan@binus.ac.id">Email</a>
+                    <a href="https://www.linkedin.com/in/jason-hermawan-18ba79325" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Jason-Hermawan" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
 
-            <div class="project-card fade-in" onclick="openModal('modalEcoSort')">
-                <div class="project-img-container">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ClMpNLG7td7AVWlFZXnvHL6ZRZqGvka2RPIcn9YWHg&s=10" alt="EcoSort Waste Classification">
-                </div>
-                <div class="project-content">
-                    <h3>EcoSort: Waste Classification System</h3>
-                    <p>Sistem klasifikasi sampah Organik & Anorganik otomatis berbasis web menggunakan Computer Vision dan Support Vector Machine (SVM).</p>
-                    <span class="tech-tag">Python · OpenCV · Scikit-Learn · SVM · Streamlit</span>
+            <div class="hero-image fade-in">
+                <img src="WhatsApp Image 2026-09-27 at 17.36.03.jpeg" alt="Foto profil Jason Hermawan">
+            </div>
+
+            <svg class="wave-divider wave-to-alt" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,55 C360,105 720,105 1080,55 C1220,35 1340,35 1440,55 L1440,120 L0,120 Z"></path>
+            </svg>
+        </section>
+
+        <section class="section about-section" id="about">
+
+            <div class="section-heading fade-in">
+                <span class="eyebrow">GET TO KNOW ME</span>
+                <h2>Tentang Saya</h2>
+            </div>
+
+            <div class="about-card fade-in">
+                <div class="about-text">
+                    <h3>Jason Hermawan</h3>
+
+                    <p>
+                        Saya Jason Hermawan, mahasiswa Computer Science semester 5
+                        di BINUS University Alam Sutera dengan peminatan Artificial
+                        Intelligence. Saya memiliki kemampuan komunikasi yang baik,
+                        adaptif, serta terbiasa bekerja sama dalam tim untuk
+                        menyelesaikan berbagai proyek.
+                    </p>
+                    <p>
+                        Selain dalam bidang akademis, saya juga memiliki pengalaman
+                        berorganisasi sebagai aktivis HIMTI periode 2024–2025 selama
+                        satu tahun. Pengalaman tersebut membantu saya mengembangkan
+                        kemampuan berkomunikasi dan bekerja sama dengan berbagai
+                        macam orang.
+                    </p>
+                    <p>
+                        Melalui program magang, saya berharap dapat mempelajari
+                        hal-hal baru, mengasah keterampilan secara langsung, dan
+                        mendapatkan pengalaman di lingkungan kerja profesional.
+                    </p>
                 </div>
             </div>
 
-            <div class="project-card fade-in" onclick="openModal('modalSentimentBot')">
-                <div class="project-img-container">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CeMyxyRWlFBc0NrLAkFMxW_f9pdi61UxHk8EE27JyA&s=10" alt="IDTM Discord Toxicity Bot">
+            <svg class="wave-divider wave-to-main" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,55 C360,105 720,105 1080,55 C1220,35 1340,35 1440,55 L1440,120 L0,120 Z"></path>
+            </svg>
+        </section>
+
+        <section class="section skills-section" id="skills">
+
+            <div class="section-heading fade-in">
+                <span class="eyebrow">WHAT I WORK WITH</span>
+                <h2>Keahlian Saya</h2>
+                <p>Beberapa teknologi dan bidang yang sedang saya pelajari.</p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card fade-in">
+                    <h3>Python</h3>
+                    <p>Data Processing, Machine Learning, dan pengembangan aplikasi.</p>
                 </div>
-                <div class="project-content">
-                    <h3>IDTM: Discord Automatic Toxicity Filtering Bot</h3>
-                    <p>Bot Discord moderasi otomatis berbasis AI untuk mendeteksi pesan toxic (Kekerasan, Rasisme, Pelecehan) secara real-time menggunakan IndoBERT.</p>
-                    <span class="tech-tag">Python · NLP · IndoBERT · PyTorch · Discord.py</span>
+
+                <div class="skill-card fade-in">
+                    <h3>C / C++</h3>
+                    <p>Programming fundamentals, algoritma, dan problem solving.</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <h3>Machine Learning & NLP</h3>
+                    <p>Model training, classification, dan text processing.</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <h3>IndoBERT / PyTorch</h3>
+                    <p>Deep learning dan Natural Language Processing.</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <h3>HTML & CSS</h3>
+                    <p>Dasar pengembangan dan desain tampilan website.</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <h3>SQL / Database</h3>
+                    <p>Pengelolaan data dan dasar sistem database.</p>
+                </div>
+
+            </div>
+
+            <svg class="wave-divider wave-to-alt" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,55 C360,105 720,105 1080,55 C1220,35 1340,35 1440,55 L1440,120 L0,120 Z"></path>
+            </svg>
+        </section>
+
+        <section class="section projects-section" id="projects">
+
+            <div class="section-heading fade-in">
+                <span class="eyebrow">MY WORK</span>
+                <h2>Project Akademik & Pribadi</h2>
+                <p>Beberapa proyek yang pernah saya kerjakan. Klik project untuk melihat detail dan video demo.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card fade-in" onclick="openModal('modalApartment')" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openModal('modalApartment')">
+
+                    <div class="project-img-container">
+                        <img src="https://media.istockphoto.com/id/2148850507/photo/contemporary-urban-apartments-with-rooftop-greenery.jpg?s=612x612&w=0&k=20&c=N5JEzh21OtER3f3IHdxf-N8kWUJVll1eT4dmXdeRwPU=" alt="Dwellth apartment recommendation">
+                        <span class="project-category">Web Development · AI</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>Dwellth - Apartment Recommendation System</h3>
+                        <p>Platform pencarian dan rekomendasi sewa/beli apartemen berdasarkan kriteria dan preferensi pengguna.</p>
+
+                        <div class="project-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Recommendation System</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+
+                        <span class="project-more">View Project</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openModal('modalEcoSort')" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openModal('modalEcoSort')">
+
+                    <div class="project-img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ClMpNLG7td7AVWlFZXnvHL6ZRZqGvka2RPIcn9YWHg&s=10" alt="EcoSort waste classification">
+                        <span class="project-category">Machine Learning · Computer Vision</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>EcoSort: Waste Classification System</h3>
+                        <p>Sistem klasifikasi sampah organik dan anorganik berbasis Computer Vision dan Support Vector Machine.</p>
+
+                        <div class="project-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">SVM</span>
+                        </div>
+
+                        <span class="project-more">View Project</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openModal('modalSentimentBot')" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openModal('modalSentimentBot')">
+
+                    <div class="project-img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CeMyxyRWlFBc0NrLAkFMxW_f9pdi61UxHk8EE27JyA&s=10" alt="IDTM Discord toxicity monitor">
+                        <span class="project-category">NLP · Deep Learning</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>SentimentBot - Indonesian Discord Toxicity Monitor</h3>
+                        <p>Bot Discord berbasis AI untuk mendeteksi pesan toxic berbahasa Indonesia secara real-time.</p>
+
+                        <div class="project-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">IndoBERT</span>
+                            <span class="tech-tag">PyTorch</span>
+                        </div>
+
+                        <span class="project-more">View Project</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <svg class="wave-divider wave-to-main" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,55 C360,105 720,105 1080,55 C1220,35 1340,35 1440,55 L1440,120 L0,120 Z"></path>
+            </svg>
+        </section>
+
+        <section class="section cv-section" id="cv">
+
+            <div class="section-heading fade-in">
+                <span class="eyebrow">MY RESUME</span>
+                <p>Preview CV</p>
+            </div>
+
+            <div class="cv-card fade-in">
+
+                <div class="cv-toolbar">
+                    <div>
+                        <h3>Jason Hermawan - CV</h3>
+                        <p>PDF Document</p>
+                    </div>
+
+                    <a href="./CV_Jason%20Hermawan.pdf" class="btn btn-primary" download>
+                        Download CV
+                    </a>
+                </div>
+
+                <div class="cv-preview">
+                    <iframe src="./CV_Jason%20Hermawan.pdf#toolbar=0&navpanes=0" title="CV Jason Hermawan"></iframe>
+                </div>
+
+            </div>
+
+            <svg class="wave-divider wave-to-alt" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,55 C360,105 720,105 1080,55 C1220,35 1340,35 1440,55 L1440,120 L0,120 Z"></path>
+            </svg>
+        </section>
+
+        <section class="section contact-section" id="contact">
+
+            <div class="contact-content fade-in">
+                <span class="eyebrow">LET'S CONNECT</span>
+                <h2>Mari Terhubung!</h2>
+
+                <p>
+                    Jika ada pertanyaan, kolaborasi, atau peluang magang,
+                    jangan ragu untuk menghubungi saya.
+                </p>
+
+                <a href="mailto:jason.hermawan@binus.ac.id" class="btn btn-primary">
+                    Kirim Email
+                </a>
+
+                <div class="contact-socials">
+                    <a href="https://www.linkedin.com/in/jason-hermawan-18ba79325" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Jason-Hermawan" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:jason.hermawan@binus.ac.id">Email</a>
                 </div>
             </div>
 
-        </div>
-    </div>
+        </section>
 
-    <div id="modalApartment" class="modal">
+    </main>
+
+    <div id="modalApartment" class="modal" onclick="if(event.target === this) closeModal('modalApartment')">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modalApartment')">&times;</span>
+
+            <button class="close-btn" onclick="closeModal('modalApartment')">×</button>
+
+            <span class="eyebrow">PROJECT DETAILS</span>
             <h2>Dwellth - Apartment Recommendation & Search System</h2>
-            
+
             <div class="video-container">
                 <iframe src="https://drive.google.com/file/d/1EkW0E-h7oziyYQD5z79_nI2e3G5hCVzd/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
 
+            <h3>Project Overview</h3>
+
             <p class="modal-desc">
-                <strong>Ringkasan Proyek:</strong><br>
-                Proyek Dwellth (Apartment Recommender and Price Predictor)  dibangun dengan arsitektur web modern mengombinasikan backend FastAPI serta frontend Vue.js. Pada sisi pemrosesan data dan AI, sistem memanfaatkan algoritma K-Means Clustering untuk mengelompokkan apartemen ke dalam segmen pasar seperti Budget, Premium, atau Fungsional, serta algoritma Random Forest Regressor untuk memprediksi harga sewa wajar dan mengidentifikasi hunian bernilai tinggi (High Value Deal). Dataset untuk project ini diambil dari kaggle, yang berisi apartment/hunian yang berlokasi di amerika serikat. Masing masing dari hunian tersebut mempunyai deskripsi karakteristik seperti harga sewa/huni,jumlah kamar tidur , kamar mandi dan fitur lainya yang digunakan untuk mencari hunian yang cocok dengan selera pengguna menggunakan content based filtering
+                Proyek Dwellth (Apartment Recommender and Price Predictor)
+                dibangun dengan arsitektur web yang mengombinasikan backend
+                FastAPI serta frontend Vue.js. Pada sisi pemrosesan data dan AI,
+                sistem memanfaatkan algoritma K-Means Clustering untuk
+                mengelompokkan apartemen ke dalam segmen pasar seperti Budget,
+                Premium, atau Fungsional, serta Random Forest Regressor untuk
+                memprediksi harga sewa wajar dan mengidentifikasi hunian bernilai
+                tinggi (High Value Deal). Dataset proyek ini berasal dari Kaggle
+                dan berisi data apartemen/hunian di Amerika Serikat. Sistem juga
+                menggunakan Content-Based Filtering untuk membantu pengguna
+                menemukan hunian berdasarkan karakteristik dan preferensi mereka.
             </p>
 
             <div class="modal-tags">
-                <span class="tech-tag">Web Development</span>
                 <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">K-Means</span>
+                <span class="tech-tag">Random Forest</span>
                 <span class="tech-tag">Recommendation System</span>
             </div>
 
-            <div class="modal-links" style="margin-top: 20px;">
-                <a href="https://github.com/Devounn/Dwellth" target="_blank" class="tombol-link">Lihat Kode di GitHub</a>
-            </div>
+            <a href="https://github.com/Jason-Hermawan/Dwellth" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-github">
+                Lihat Kode di GitHub
+            </a>
+
         </div>
     </div>
 
-    <div id="modalEcoSort" class="modal">
+    <div id="modalEcoSort" class="modal" onclick="if(event.target === this) closeModal('modalEcoSort')">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modalEcoSort')">&times;</span>
+
+            <button class="close-btn" onclick="closeModal('modalEcoSort')">×</button>
+
+            <span class="eyebrow">PROJECT DETAILS</span>
             <h2>EcoSort: Waste Classification System</h2>
-            
+
             <div class="video-container">
                 <iframe src="https://drive.google.com/file/d/1rbslsoNtl5qanrsG9gOiap8641xxe9Nj/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
 
+            <h3>Project Overview</h3>
+
             <p class="modal-desc">
-                <strong>Ringkasan Proyek:</strong><br>
-                Proyek EcoSort merupakan sistem klasifikasi sampah Organik dan Anorganik otomatis berbasis web yang dibangun menggunakan kombinasi ekstraksi fitur visual seperti Color Histogram, Local Binary Patterns (LBP), dan Histogram of Oriented Gradients (HOG), serta diproses menggunakan teknik pengurangan dimensi Principal Component Analysis (PCA). Pemodelan utamanya mengimplementasikan Support Vector Machine (SVM) dengan kernel RBF yang berhasil meraih akurasi sebesar 96,22% dan waktu inferensi cepat 15,07 ms per gambar. Seluruh alur sistem dikembangkan dengan bahasa Python memanfaatkan pustaka OpenCV dan Scikit-Learn, lalu dideploy secara interaktif menggunakan Streamlit
+                EcoSort merupakan sistem klasifikasi sampah organik dan
+                anorganik otomatis berbasis web. Sistem ini menggunakan
+                ekstraksi fitur visual seperti Color Histogram, Local Binary
+                Patterns (LBP), dan Histogram of Oriented Gradients (HOG),
+                serta Principal Component Analysis (PCA) untuk pengurangan
+                dimensi. Model utamanya menggunakan Support Vector Machine
+                (SVM) dengan kernel RBF yang berhasil meraih akurasi sebesar
+                96,22% dan waktu inferensi 15,07 ms per gambar. Sistem
+                dikembangkan menggunakan Python, OpenCV, dan Scikit-Learn,
+                kemudian diintegrasikan dengan Streamlit.
             </p>
 
             <div class="modal-tags">
@@ -193,24 +365,39 @@
                 <span class="tech-tag">Streamlit</span>
             </div>
 
-            <div class="modal-links" style="margin-top: 20px;">
-                <a href="https://github.com/ClarenciaAugustine-code/EcoSort" target="_blank" class="tombol-link">Lihat Kode di GitHub</a>
-            </div>
+            <a href="https://github.com/Jason-Hermawan/EcoSort" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-github">
+                Lihat Kode di GitHub
+            </a>
+
         </div>
     </div>
 
-    <div id="modalSentimentBot" class="modal">
+    <div id="modalSentimentBot" class="modal" onclick="if(event.target === this) closeModal('modalSentimentBot')">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modalSentimentBot')">&times;</span>
-            <h2>IDTM: Indonesian Discord Toxicity Monitor Bot</h2>
-            
+
+            <button class="close-btn" onclick="closeModal('modalSentimentBot')">×</button>
+
+            <span class="eyebrow">PROJECT DETAILS</span>
+            <h2>SentimentBot</h2>
+
             <div class="video-container">
                 <iframe src="https://drive.google.com/file/d/1J9MxCjT3nW7_4OwznJQACfg8b3cEtdyD/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
 
+            <h3>Project Overview</h3>
+
             <p class="modal-desc">
-                <strong>Ringkasan Proyek:</strong><br>
-            Proyek IDTM (Indonesian Discord Toxicity Monitor) merupakan sistem bot Discord berbasis AI yang dirancang untuk melakukan moderasi otomatis dan deteksi teks berbahasa Indonesia secara real-time. Menggunakan dataset percakapan komunitas yang mencakup empat kategori (Neutral, Violence, Racist, dan Harassment), proyek ini melakukan eksperimen benchmarking terhadap enam arsitektur model machine learning dan NLP, yaitu Naive Bayes, Logistic Regression, SVM, FastText, BiLSTM, dan IndoBERT. Model Transformer IndoBERT terpilih sebagai model terbaik setelah mencapai weighted F1-score sebesar 84,17% dan nilai AUC 0,9655. Dalam penerapannya, bot ini mampu memberikan peringatan publik otomatis untuk prediksi dengan tingkat keyakinan di atas 80% dengan kecepatan inferensi di bawah 2 detik, serta menyediakan fitur audit log untuk kebutuhan moderator server.  
+                SentimentBot merupakan sistem bot Discord berbasis AI untuk melakukan
+                moderasi otomatis dan mendeteksi teks berbahasa Indonesia
+                secara real-time. Proyek ini menggunakan dataset percakapan
+                komunitas dengan empat kategori: Neutral, Violence, Racist,
+                dan Harassment. Eksperimen dilakukan dengan enam arsitektur
+                machine learning dan NLP, yaitu Naive Bayes, Logistic
+                Regression, SVM, FastText, BiLSTM, dan IndoBERT. IndoBERT
+                menjadi model terbaik dengan weighted F1-score sebesar
+                84,17% dan AUC 0,9655. Bot juga memberikan peringatan otomatis
+                untuk prediksi dengan confidence di atas 80% dan menyediakan
+                audit log untuk moderator server.
             </p>
 
             <div class="modal-tags">
@@ -222,22 +409,17 @@
                 <span class="tech-tag">Discord.py</span>
             </div>
 
-            <div class="modal-links" style="margin-top: 20px;">
-                <a href="https://github.com/Meezuki/SentimentBot" target="_blank" class="tombol-link">Lihat Kode di GitHub</a>
-            </div>
+            <a href="https://github.com/Jason-Hermawan/SentimentBot" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-github">
+                Lihat Kode di GitHub
+            </a>
+
         </div>
     </div>
 
-    <div class="section gray-bg fade-in" id="contact" style="text-align: center;">
-        <h2>Kontak</h2>
-        <p class="teks-isi">Jika ada pertanyaan atau peluang magang, Anda bisa menghubungi saya lewat tombol di bawah:</p>
-        <br>
-        <a href="https://outlook.office.com/mail/deeplink/compose?to=jason.hermawan@binus.ac.id" target="_blank" class="tombol">Kirim Email</a>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2026 Jason Hermawan - BINUS University</p>
-    </div>
+    <footer class="footer">
+        <p>© 2026 Jason Hermawan · BINUS University</p>
+        <a href="#home">Back to top</a>
+    </footer>
 
     <script src="./script.js"></script>
 </body>
